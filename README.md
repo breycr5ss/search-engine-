@@ -78,6 +78,10 @@ search-engine-/
 **Prerequisites:** Docker & Docker Compose installed
 
 ```bash
+# making the scripts excuatable
+chmod +x scripts/*.sh 
+
+
 # 1. Start PostgreSQL container
 bash scripts/docker-setup.sh
 
