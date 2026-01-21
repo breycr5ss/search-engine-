@@ -1,0 +1,122 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Search results</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Search anything with our simple and fast search engine." />
+    <meta name="keywords" content="search, engine, simple, fast, web search" />
+    <meta name="author" content="Your Name" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+</head>
+<body>
+
+<header>
+    <div class="search-bar-container">
+        <a href="index.html" class="logo">Search</a>
+
+        <form class="search-form" action="results.html" method="get">
+            <span class="search-icon">🔍</span>
+            <input 
+                type="search" 
+                name="q" 
+                class="search-input" 
+                value="example" 
+                placeholder="Search..."
+            >
+        </form>
+    </div>
+</header>
+
+<main>
+
+    <div class="stats">
+        About 1,240,000 results (0.42 seconds)
+    </div>
+
+    <div class="result-item">
+        <div class="result-header">
+            <img src="https://www.google.com/s2/favicons?domain=example.com&sz=32" 
+                 class="favicon" alt="" loading="lazy">
+            <a href="https://example.com" class="result-url" target="_blank">example.com</a>
+        </div>
+        <h3 class="result-title">
+            <a href="https://example.com" target="_blank">Example Domain</a>
+        </h3>
+        <div class="result-snippet">
+            This domain is for use in illustrative <span class="highlight">examples</span> in documents. 
+            You may use this domain in literature without prior coordination or asking for permission.
+        </div>
+    </div>
+
+    <div class="result-item">
+        <div class="result-header">
+            <img src="https://www.google.com/s2/favicons?domain=wikipedia.org&sz=32" 
+                 class="favicon" alt="" loading="lazy">
+            <a href="https://en.wikipedia.org/wiki/Example" class="result-url" target="_blank">en.wikipedia.org › wiki › Example</a>
+        </div>
+        <h3 class="result-title">
+            <a href="https://en.wikipedia.org/wiki/Example" target="_blank"><span class="highlight">Example</span> - Wikipedia</a>
+        </h3>
+        <div class="result-snippet">
+            An <span class="highlight">example</span> is the illustration of a principle by means of a concrete instance. 
+            It is the opposite of a definition, which gives the precise meaning of a word or concept.
+        </div>
+    </div>
+
+    <div class="result-item">
+        <div class="result-header">
+            <img src="https://www.google.com/s2/favicons?domain=merriam-webster.com&sz=32" 
+                 class="favicon" alt="" loading="lazy">
+            <a href="https://www.merriam-webster.com/dictionary/example" class="result-url" target="_blank">merriam-webster.com › dictionary › example</a>
+        </div>
+        <h3 class="result-title">
+            <a href="https://www.merriam-webster.com/dictionary/example" target="_blank">
+                <span class="highlight">EXAMPLE</span> Definition & Meaning - Merriam-Webster
+            </a>
+        </h3>
+        <div class="result-snippet">
+            The meaning of <span class="highlight">example</span> is one that serves as a pattern to be imitated or not to be imitated. 
+            How to use <span class="highlight">example</span> in a sentence.
+        </div>
+    </div>
+
+    <div class="result-item">
+        <div class="result-header">
+            <img src="https://www.google.com/s2/favicons?domain=dictionary.com&sz=32" 
+                 class="favicon" alt="" loading="lazy">
+            <a href="https://www.dictionary.com/browse/example" class="result-url" target="_blank">dictionary.com › browse › example</a>
+        </div>
+        <h3 class="result-title">
+            <a href="https://www.dictionary.com/browse/example" target="_blank">
+                <span class="highlight">EXAMPLE</span> Definition & Meaning | Dictionary.com
+            </a>
+        </h3>
+        <div class="result-snippet">
+            <span class="highlight">Example</span> definition: one of a number of things, or a part of something, 
+            taken to show the character of the whole: a beautiful <span class="highlight">example</span> of medieval architecture.
+        </div>
+    </div>
+
+    <!-- You can duplicate the block above and change the content for pages 2,3,... -->
+
+    <div class="pagination">
+        <span class="page-link current">1</span>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <a href="#" class="page-link">4</a>
+        <a href="#" class="page-link">5</a>
+        <a href="#" class="page-link">Next ›</a>
+    </div>
+
+</main>
+
+</body>
+</html>
