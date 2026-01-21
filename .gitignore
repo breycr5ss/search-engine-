@@ -1,0 +1,30 @@
+# Environment Configuration
+.env
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# PHP
+vendor/
+composer.lock
+
+# Database Backups
+*.sql.backup
+*.dump

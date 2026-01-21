@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode
+.idea
+*.sublime-*
+
+# Node (if any)
+node_modules/
+npm-debug.log
+
+# PHP
+vendor/
+composer.lock
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Backups
+*.backup
+*.dump
+backups/
+
+# Old HTML files (we use PHP versions now)
+index.html
+results.html
+rehearsal.php
+
+# Sample data (large file, not needed in container)
+sample-data.php
