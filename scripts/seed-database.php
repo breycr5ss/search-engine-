@@ -49,9 +49,16 @@ try {
     echo "This will insert all records into the database.\n";
     echo "Continue? (yes/no): ";
     $handle = fopen("php://stdin", "r");
-    $confirmation = trim(fgets($handle));
+    $input = fgets($handle);
     fclose($handle);
-    
+
+    if ($input === false) {
+        echo "\nNo input received. Operation cancelled.\n";
+        exit(1);
+    }
+
+    $confirmation = trim($input);
+
     if (strtolower($confirmation) !== 'yes') {
         echo "\nOperation cancelled.\n";
         exit(0);

@@ -30,6 +30,59 @@ services:
     networks:
       - search_engine_network
 
+  # PHP Application Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: search_engine_app
+    restart: unless-stopped
+    
+    environment:
+      # Database Configuration (connects to postgres service)
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: search_engine
+      DB_USER: search_user
+      DB_PASSWORD: search_password_2026
+      
+      # Application Settings
+      APP_ENV: development
+      APP_DEBUG: "true"
+      APP_TIMEZONE: UTC
+      
+      # Search Configuration
+      RESULTS_PER_PAGE: 10
+      DEFAULT_SEARCH_MODE: and
+      MAX_QUERY_LENGTH: 200
+      
+      # Performance
+      ENABLE_QUERY_CACHE: "false"
+      CACHE_TTL: 3600
+    
+    ports:
+      - "8000:8000"
+    
+    volumes:
+      # Mount source code for live reloading during development
+      - ./:/var/www/html:ro
+      # Make specific directories writable if needed
+      - ./logs:/var/www/html/logs:rw
+    
+    depends_on:
+      postgres:
+        condition: service_healthy
+    
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(file_get_contents(\"http://localhost:8000\") ? 0 : 1);' || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    
+    networks:
+      - search_engine_network
+
   # Optional: pgAdmin for database management
   pgadmin:
     image: dpage/pgadmin4:latest
